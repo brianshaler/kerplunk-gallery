@@ -100,7 +100,7 @@ module.exports = React.createFactory React.createClass
       #   ,
       #     DOM.a
       #       href: "/admin/identity/view/#{identity.guid}"
-      #     , identity.displayName
+      #     , identity.fullName ? identity.nickName
       #   DOM.p
       #     className: 'activity-item-text'
       #   , item.message
