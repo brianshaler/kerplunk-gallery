@@ -5,5 +5,5 @@ module.exports = (System) ->
         'kerplunk-gallery:gallery':
           description: 'Gallery! (recent photos)'
           sort: 'desc'
-      styles:
-        'kerplunk-gallery/css/galleryitem.css': ['/admin/dashboard', '/admin/dashboard/**']
+      css:
+        'kerplunk-gallery:galleryItem': 'kerplunk-gallery/css/galleryitem.css'
