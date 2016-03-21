@@ -19,7 +19,7 @@ module.exports = React.createFactory React.createClass
 
   getInitialState: ->
     arr = @props.data ? []
-    ids = _.pluck arr, '_id'
+    ids = _.map arr, '_id'
     items = {}
     aspectRatios = {}
     for item in arr
@@ -104,7 +104,7 @@ module.exports = React.createFactory React.createClass
   getSortedIds: (items = @state.items) ->
     _ items
     .sortBy (item) -> -1 * Date.parse item.postedAt
-    .pluck '_id'
+    .map '_id'
     .value()
 
   refresh: ->

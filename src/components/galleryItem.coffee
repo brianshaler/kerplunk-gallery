@@ -39,7 +39,7 @@ module.exports = React.createFactory React.createClass
     unless image?.sizes?.length > 0
       return nope()
 
-    sizeSort = _.sortByOrder image.sizes,
+    sizeSort = _.orderBy image.sizes,
       [squareness, proximity(maxWidth, maxHeight)]
       ['desc', 'desc']
 
